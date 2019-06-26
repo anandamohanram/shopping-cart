@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
-import {Product} from '../../component'
+import { connect } from 'react-redux'
+import { Product } from '../../component'
 import styles from './ProductList.module.css'
 export class ProductList extends Component {
     render() {
         return (
             <div className={styles.productListContainer}>
-                {/* TODO: map from state */}
-                <Product name="NAME" price="23" />
-                <Product name="NAME" price="23" />
-                <Product name="NAME" price="23" />
-                <Product name="NAME" price="23" />
+                {this.props.products.map((product, index) =>
+                    <Product key={index} name={product.name} price={product.price} />
+                )}
             </div>
         )
     }
 }
 
-export default ProductList
+const mapStateToProps = state => ({
+    products: state.productsReducer,
+    cart: state.shoppingCartReducer
+})
+
+export default connect(mapStateToProps)(ProductList)
