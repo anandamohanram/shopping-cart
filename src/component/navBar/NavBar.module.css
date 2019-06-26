@@ -1,0 +1,15 @@
+.navBarContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(38, 38, 41);
+}
+
+
+.navButton{
+    color: #fff;
+}
+
+.activeNavButton{
+    color: salmon;
+}
