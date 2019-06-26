@@ -1,2 +1,3 @@
 import NavBar from './navBar/NavBar';
-export {NavBar};
+import Product from './Product/Product'
+export { NavBar, Product };
