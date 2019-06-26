@@ -27,6 +27,7 @@ export default (state = initialState, { type, payload }) => {
             }
 
         case REMOVE_PRODUCT:
+            //remove product
             let updatedArray = state.products.filter(product => product.name !== payload.name);
             return { products: updatedArray, total: updatedArray.reduce((grandTotal, nextProduct) => grandTotal + nextProduct.tot, 0) }
 
