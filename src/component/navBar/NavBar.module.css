@@ -1,4 +1,4 @@
-.navBarContainer{
+.navBarContainer {
     background: rgb(38, 38, 41);
     width: 100%;
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: flex-end;
 }
 
-.navButton{
+.navButton {
     color: rgb(255, 78, 58);
     padding: 10px 2%;
     display: block;
@@ -16,7 +16,7 @@
     padding: 10px 20px;
 }
 
-.activeNavButton{
+.activeNavButton {
     border-bottom-color: rgb(255, 78, 58);
     border-bottom-style: solid;
     border-bottom-width: 4px;

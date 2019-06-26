@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import { NavBar } from './component';
 import './App.css';
 import Routes from './router/Routes';
@@ -10,12 +10,12 @@ function App() {
   return (
 
     <Provider store={store}>
-    <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <Routes />
-      </div>
-    </BrowserRouter>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <Routes />
+        </div>
+      </BrowserRouter>
     </Provider>
   );
 }

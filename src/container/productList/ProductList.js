@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Product } from '../../component'
-import {bindActionCreators} from 'redux'
+import { bindActionCreators } from 'redux'
 import styles from './ProductList.module.css'
-import {addProduct} from '../../store/action/actions'
+import { addProduct } from '../../store/action/actions'
 export class ProductList extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.handleAdd = this.handleAdd.bind(this);
     }
@@ -20,7 +20,7 @@ export class ProductList extends Component {
         return (
             <div className={styles.productListContainer}>
                 {this.props.products.map((product, index) =>
-                    <Product key={index} name={product.name} price={product.price} onAdd={this.handleAdd}/>
+                    <Product key={index} name={product.name} price={product.price} onAdd={this.handleAdd} />
                 )}
             </div>
         )
@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => {
-	return bindActionCreators({addProduct : addProduct}, dispatch)
+    return bindActionCreators({ addProduct: addProduct }, dispatch)
 }
 
 
