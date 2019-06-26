@@ -1,2 +1,2 @@
-import NavBar from './navBar';
+import NavBar from './navBar/NavBar';
 export {NavBar};
