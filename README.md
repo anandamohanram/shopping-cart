@@ -1,5 +1,6 @@
+##VR-FrontendTest-v1.1
+
 #Shopping-cart
-VR-FrontendTest-v1.1
 A basic shopping cart in Javascript using REACT-REDUX
 
 
