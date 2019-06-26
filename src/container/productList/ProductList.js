@@ -17,12 +17,18 @@ export class ProductList extends Component {
 
 
     render() {
+        const itemsInCart = this.props.cart.products.reduce((quantity, nextProduct) => quantity + nextProduct.qty, 0)
         return (
-            <div className={styles.productListContainer}>
-                {this.props.products.map((product, index) =>
-                    <Product key={index} name={product.name} price={product.price} onAdd={this.handleAdd} />
-                )}
-            </div>
+            <>
+                {itemsInCart === 0
+                    ? <div className={styles.message}>Your Shopping cart is empty. Please add items to cart</div>
+                    : <div className={styles.message}>You have {itemsInCart} items in your cart!</div>}
+                <div className={styles.productListContainer}>
+                    {this.props.products.map((product, index) =>
+                        <Product key={index} name={product.name} price={product.price} onAdd={this.handleAdd} />
+                    )}
+                </div>
+            </>
         )
     }
 }

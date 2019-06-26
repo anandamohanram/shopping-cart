@@ -5,6 +5,10 @@
   padding: 2%
 }
 
+.message {
+  margin-top: 2%;
+}
+
 @media (min-width: 1025px) {
   .productListContainer {
     grid-template-columns: repeat(5, 1fr);
